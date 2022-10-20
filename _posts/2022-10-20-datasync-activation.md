@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Activating an AWS DataSync instance"
-date:   2022-10-20 14:00:00 +1200
+date:   2022-10-20 14:00:00 +1300
 ---
 
 This has been a slightly annoying process and it always catches me out (the three times I've had to do it previously). 
