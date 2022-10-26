@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Janky bash one-liner: enabling termination protection on a bunch of CloudFormation stacks"
-date:   2022-10-27 11:15:00 +1200
+date:   2022-10-27 11:15:00 +1300
 ---
 
 A janky bash one-liner for today. This is a quick and dirty way of enabling termination protection on a bunch of CloudFormation stacks using the AWS CLI. 
