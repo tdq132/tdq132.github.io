@@ -27,7 +27,7 @@ This is a quick blog on how to activate a DataSync agent that is running on EC2 
 1. If you were given the activation code, chuck it in the DataSync console when setting up a new agent. If all is well, the agent should show up green and ready to use. 
 
 
-![img1](https://raw.githubusercontent.com/tdq132/tdq132.github.io/master/_media/2022-10-20-datasync-activation-img1.png)
+![img1](/assets/2022-10-20-datasync-activation-img1.png)
 
 
 [This page](https://aws.amazon.com/premiumsupport/knowledge-center/datasync-cross-activate-agent/) has roughly the same as above with a little more detail, if you need more. 
