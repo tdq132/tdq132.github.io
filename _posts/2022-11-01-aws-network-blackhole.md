@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Our EC2 network black hole"
-date:   2022-10-28 15:00:00 +1300
+date:   2022-11-01 10:00:00 +1300
 ---
 
 This is a blog detailing an issue I encountered while attempting to connect an EC2 instance to an internet endpoint via a firewall. 
