@@ -1,0 +1,12 @@
+---
+---
+
+@import "minima";
+
+/** These are my theme overrides */
+
+/** Wrapper */
+/** This sets our content boxes a little larger than the default */
+.wrapper { max-width: -webkit-calc(1300px - (30px * 2)); max-width: calc(1300px - (30px * 2)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
+@media screen and (max-width: 1300px) { .wrapper { max-width: -webkit-calc(1300px - (30px)); max-width: calc(1300px - (30px)); padding-right: 15px; padding-left: 15px; } }
+
