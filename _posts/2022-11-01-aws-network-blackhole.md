@@ -91,7 +91,7 @@ ip-10-130-105-12.ap-sou ether 06:0c:03:1a:aa:fc C eth2
 _Firewall 2 -_
 ``` bash
 [root@FW02:0]$ arp | grep 10.130.106.12
-ip-10-130-106-12.ap-sou ether 02:b4:40:4d:2c:6c C eth2
+ip-10-130-106-12.ap-sou ether 02:73:56:60:d5:e6 C eth2
 ```
 
 ... and traffic was flowing smoothly again - the MACs had been updated. 
