@@ -7,7 +7,7 @@ date:   2022-11-01 10:00:00 +1300
 This is a blog detailing an issue I encountered while attempting to connect an EC2 instance to an internet endpoint via a firewall. 
 
 
-# The requirements
+# The Requirements
 
 Nice and simple requirements. 
 
@@ -22,7 +22,7 @@ Nice and simple requirements.
 So they are pretty much identical, apart from the subnet (AZ) they are deployed to (and implicitly the firewall they are talking to).
 
 
-# The problem 
+# The Problem 
 
 For some reason, I find that the instance in AZ-A is not able to connect out to the public SSM endpoint (`ssm.ap-southeast-2.amazonaws.com`). The instance in AZ-B is connecting fine, so what's gone wrong? 
 
@@ -40,7 +40,7 @@ Hmmm, okay. The usual suspects are all fine. Maybe there is a rule missing from 
 Nope. All good there. Traffic is flowing and green. Weird. 
 
 
-# Digging into it
+# Digging Deeper
 
 tcpdump time! Let's see what happens when we run a tcpdump on the problem instance and attempt to curl `https://ssm.ap-southeast-2.amazonaws.com`... 
 
@@ -62,7 +62,7 @@ Thanks to Phil for mentioning ARP, that was the hint I needed to go digging a li
 
 
 
-# The firewall ARP tables
+# The Firewall ARP Tables
 
 On looking at the firewall ARP tables while the issue was happening, I noticed the MAC address for the problem instance was out of date!
 
@@ -97,7 +97,7 @@ ip-10-130-106-12.ap-sou ether 02:b4:40:4d:2c:6c C eth2
 ... and traffic was flowing smoothly again - the MACs had been updated. 
 
 
-# The resolution 
+# The (temporary) Resolution 
 
 The final resolution is pending. 
 
@@ -107,9 +107,9 @@ In the meantime, `ping` is our friend to run if this pops up again.
 
 
 
-# Closing notes 
+# Closing Notes 
 
-What first looked like a nice simple issue (hello missing security group rules!) turned out to be much more complex than thought (from a debugging perspective at least!).
+What first looked like a nice simple issue (hello missing security group rules) turned out to be much more complex than thought (from a debugging perspective at least!).
 
 It's been super interesting digging a little deeper into the networking side of things, but I think I'll leave networking to the pros 😄
 
