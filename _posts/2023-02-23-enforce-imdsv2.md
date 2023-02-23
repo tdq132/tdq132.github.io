@@ -59,7 +59,7 @@ class EnforceImdsv2(Construct):
             f"enforce_imdsv2",
             resource_type="Custom::RetroEnforceImdsV2",
             on_create=custom_resources.AwsSdkCall(
-                physical_resource_id=custom_resources.PhysicalResourceId.of("{instance_id}_retro_enforce_imdsv2"),
+                physical_resource_id=custom_resources.PhysicalResourceId.of(f"{instance_id}_retro_enforce_imdsv2"),
                 parameters={ 
                     "InstanceId": instance_id,
                     "HttpTokens": "required",
