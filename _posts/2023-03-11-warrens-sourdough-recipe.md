@@ -77,3 +77,6 @@ Turn cooked loaf out on to a cooling rack
 Do **NOT** cut until completely cold (this avoids a doughy texture)
 
 Lastly, and most importantly, Enjoy!!!
+
+
+![img1](/assets/2023-03-11-sourdough.jpeg)
