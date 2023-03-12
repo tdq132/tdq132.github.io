@@ -24,9 +24,13 @@ I'm currently monitoring the production and consumption by using [Telegraf](http
 
 Fronius also offer system monitoring out of the box. When connected to the internet, data is regularly sent up to their [Solar.web](https://www.solarweb.com/) service, which can be accessed using their web interface and mobile apps. Solar.web has a free version which allows viewing basic data about the PV system (generation, consumption, export, etc.). Solar.web also offer an optional premium version that has more features such as ROI, PV production forecast, extended reports, and more. 
 
+![img1](/assets/2023-03-13-solar-panels.jpeg)
 
 Stay tuned for more! I plan on detailing more of the monitoring side of things over the next little while. 
 
 <br>
 _This blog will be updated with links to future parts as they are published_ 😄
 
+# In this series
+
+- Solar monitoring part 1 - _you are here_
