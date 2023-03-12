@@ -10,4 +10,5 @@ This blog is a place for me to publish things that I find interesting, or random
 
 You can find me on [LinkedIn](https://www.linkedin.com/in/thomas-q) and [Github](https://github.com/tdq132). 🙂
 
-<sub>_Opinions expressed are solely my own and do not express the views or opinions of my employer._</sub>
+<br></br>
+<sub>_Views and opinions expressed are solely my own and do not express the views or opinions of my employer._</sub>

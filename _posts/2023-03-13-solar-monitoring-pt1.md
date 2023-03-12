@@ -27,6 +27,6 @@ Fronius also offer system monitoring out of the box. When connected to the inter
 
 Stay tuned for more! I plan on detailing more of the monitoring side of things over the next little while. 
 
-&nbsp;
+<br></br>
 _This blog will be updated with links to future parts as they are published_ 😄
 
