@@ -56,7 +56,10 @@ There is also a small bit of style formatting to center it nicely in the panel.
 
         // Monday to Friday
         if (day >= 1 && day <= 5) {
-            if (hour >= 7 && hour < 11) {
+            if (hour < 7) {
+                document.getElementById("tariff").innerHTML = "🟢 Night";
+            }
+            else if (hour >= 7 && hour < 11) {
                 document.getElementById("tariff").innerHTML = "🔴 Peak";
             }
             else if (hour >= 11 && hour < 17) {
@@ -75,7 +78,10 @@ There is also a small bit of style formatting to center it nicely in the panel.
 
         // Saturday and Sunday
         if (day >= 6 && day <= 7) {
-            if (hour >= 7 && hour < 23) {
+            if (hour < 7) {
+                document.getElementById("tariff").innerHTML = "🟢 Night";
+            }
+            else if (hour >= 7 && hour < 23) {
                 document.getElementById("tariff").innerHTML = "🟠 Off Peak";
             }
             else if (hour >= 23) {
