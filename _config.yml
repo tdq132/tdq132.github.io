@@ -1,13 +1,12 @@
 title: Tom's blog
-# email: hi@thomasquirke.com # not my actual email FYI
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   This is a place for me to blog about random things that I find interesting, or 
   things that I think can help other people out.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://thomasquirke.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://thomasquirke.com"
 github_username:  tdq132
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
