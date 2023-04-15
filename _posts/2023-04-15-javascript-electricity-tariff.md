@@ -77,7 +77,7 @@ There is also a small bit of style formatting to center it nicely in the panel.
         }
 
         // Saturday and Sunday
-        if (day >= 6 && day <= 7) {
+        if (day == 6 || day == 0) {
             if (hour < 7) {
                 document.getElementById("tariff").innerHTML = "🟢 Night";
             }
