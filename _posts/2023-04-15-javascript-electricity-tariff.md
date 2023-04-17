@@ -27,7 +27,8 @@ change the Mode to `HTML`, and use the below code. Update as you see fit.
 
 In this example, I'm doing a basic check on what day of the week it is, and then depending on the current hour, displaying a green/yellow/red traffic light and corresponding tariff. 
 
-There is also a small bit of style formatting to center it nicely in the panel. 
+There is a small bit of style formatting to center it nicely in the panel, and also a JS `setInterval` which has the script rerun every 30 seconds - this is because the JS is not
+reloaded when the dashboard refreshes - only on full page refresh. 
 
 
 ``` html
@@ -47,47 +48,60 @@ There is also a small bit of style formatting to center it nicely in the panel.
 
 <body>
     <div class="center">
-        <h3 id="tariff">Unknown!</h3>
+        <h3 id="tariff">Unknown 😥</h3>
     </div>
     <script>
-        // Current day and hour
-        day = new Date().getDay()
-        hour = new Date().getHours()
+        // Initial population of tariff before function interval kicks in
+        get_tariff()
 
-        // Monday to Friday
-        if (day >= 1 && day <= 5) {
-            if (hour < 7) {
-                document.getElementById("tariff").innerHTML = "🟢 Night";
+        // Rerun our function every 30 seconds 
+        setInterval(function () {
+            get_tariff()
+        }, 30000)
+
+        // Our function
+        function get_tariff() {
+            // Current day and hour
+            day = new Date().getDay()
+            hour = new Date().getHours()
+
+            // Monday to Friday
+            if (day >= 1 && day <= 5) {
+                if (hour < 7) {
+                    document.getElementById("tariff").innerHTML = "🟢 Night";
+                }
+                else if (hour >= 7 && hour < 11) {
+                    document.getElementById("tariff").innerHTML = "🔴 Peak";
+                }
+                else if (hour >= 11 && hour < 17) {
+                    document.getElementById("tariff").innerHTML = "🟠 Off Peak";
+                }
+                else if (hour >= 17 && hour < 21) {
+                    document.getElementById("tariff").innerHTML = "🔴 Peak";
+                }
+                else if (hour >= 21 && hour < 23) {
+                    document.getElementById("tariff").innerHTML = "🟠 Off Peak";
+                }
+                else if (hour >= 23) {
+                    document.getElementById("tariff").innerHTML = "🟢 Night";
+                }
             }
-            else if (hour >= 7 && hour < 11) {
-                document.getElementById("tariff").innerHTML = "🔴 Peak";
-            }
-            else if (hour >= 11 && hour < 17) {
-                document.getElementById("tariff").innerHTML = "🟠 Off Peak";
-            }
-            else if (hour >= 17 && hour < 21) {
-                document.getElementById("tariff").innerHTML = "🔴 Peak";
-            }
-            else if (hour >= 21 && hour < 23) {
-                document.getElementById("tariff").innerHTML = "🟠 Off Peak";
-            }
-            else if (hour >= 23) {
-                document.getElementById("tariff").innerHTML = "🟢 Night";
+
+            // Saturday and Sunday
+            if (day == 6 || day == 0) {
+                if (hour < 7) {
+                    document.getElementById("tariff").innerHTML = "🟢 Night";
+                }
+                else if (hour >= 7 && hour < 23) {
+                    document.getElementById("tariff").innerHTML = "🟠 Off Peak";
+                }
+                else if (hour >= 23) {
+                    document.getElementById("tariff").innerHTML = "🟢 Night";
+                }
             }
         }
 
-        // Saturday and Sunday
-        if (day == 6 || day == 0) {
-            if (hour < 7) {
-                document.getElementById("tariff").innerHTML = "🟢 Night";
-            }
-            else if (hour >= 7 && hour < 23) {
-                document.getElementById("tariff").innerHTML = "🟠 Off Peak";
-            }
-            else if (hour >= 23) {
-                document.getElementById("tariff").innerHTML = "🟢 Night";
-            }
-        }
+
     </script>
 </body>
 
