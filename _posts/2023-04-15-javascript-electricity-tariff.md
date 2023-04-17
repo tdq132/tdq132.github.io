@@ -22,7 +22,7 @@ When you have set the above, restart Grafana.
 
 ## The code
 
-Now you can pop into Grafana and andd a new Panel to your dashboard. Set the panel type to `Text`, 
+Now you can pop into Grafana and add a new Panel to your dashboard. Set the panel type to `Text`, 
 change the Mode to `HTML`, and use the below code. Update as you see fit. 
 
 In this example, I'm doing a basic check on what day of the week it is, and then depending on the current hour, displaying a green/yellow/red traffic light and corresponding tariff. 
