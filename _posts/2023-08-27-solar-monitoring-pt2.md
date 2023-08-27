@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Solar Monitoring - Part 2 - Storage and Ingestion"
-date:   2023-08-27 11:00:00 +1300
+date:   2023-08-27 11:00:00 +1200
 ---
 
 This is part 2 of a series of posts I'm writing on how I'm monitoring my solar energy production and consumption at my home in Marlborough, New Zealand. 
@@ -60,23 +60,23 @@ This is a copy of the `fronius-flow.conf` file, which contains the API endpoint 
          "Inverters" : {
             "1" : {
                "DT" : 75,
-               "E_Day" : 2409.699951171875,
-               "E_Total" : 10382900,
-               "E_Year" : 3769427.75,
-               "P" : 426
+               "E_Day" : 8964,
+               "E_Total" : 11332559,
+               "E_Year" : 4719089.5,
+               "P" : 1692
             }
          },
          "Site" : {
-            "E_Day" : 2409.699951171875,
-            "E_Total" : 10382900,
-            "E_Year" : 3769427.75,
+            "E_Day" : 8964,
+            "E_Total" : 11332559,
+            "E_Year" : 4719089.5,
             "Meter_Location" : "grid",
             "Mode" : "meter",
             "P_Akku" : null,
-            "P_Grid" : 1899.96,
-            "P_Load" : -2325.96,
-            "P_PV" : 426,
-            "rel_Autonomy" : 18.315018315018314,
+            "P_Grid" : 1720.6400000000001,
+            "P_Load" : -3412.6400000000003,
+            "P_PV" : 1692,
+            "rel_Autonomy" : 49.580383515401557,
             "rel_SelfConsumption" : 100
          },
          "Version" : "12"
@@ -89,7 +89,7 @@ This is a copy of the `fronius-flow.conf` file, which contains the API endpoint 
          "Reason" : "",
          "UserMessage" : ""
       },
-      "Timestamp" : "2023-07-05T12:36:14+12:00"
+      "Timestamp" : "2023-08-27T13:09:46+12:00"
    }
 }
 ```
@@ -108,7 +108,7 @@ The [Fronius API documentation](https://www.fronius.com/en/solar-energy/installe
 
 
 # That's it for now! 
-Part 3 will probably dig into the nitty gritty of the Grafana Dashboard. Thanks for reading 
+Part 3 will probably dig into the nitty gritty of the Grafana Dashboard. Thanks for reading!
 
 
 

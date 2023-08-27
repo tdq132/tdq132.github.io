@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Solar Monitoring - Part 1 - Introduction"
-date:   2023-03-13 11:00:00 +1300
+date:   2023-03-13 11:00:00 +1200
 ---
 
 This is part 1 of a series of posts I'm writing on how I'm monitoring my solar energy production and consumption at my home in Marlborough, New Zealand. 
