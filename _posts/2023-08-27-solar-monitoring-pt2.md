@@ -119,5 +119,5 @@ _This blog will be updated with links to future parts as they are published_ ðŸ˜
 
 # In this series
 
-- [Solar monitoring part 1](2023-03-13-solar-monitoring-pt1.md)
+- [Solar monitoring part 1](https://thomasquirke.com/2023/03/12/solar-monitoring-pt1.html)
 - Solar monitoring part 2 - _you are here_

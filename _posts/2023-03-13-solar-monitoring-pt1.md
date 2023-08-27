@@ -34,3 +34,4 @@ _This blog will be updated with links to future parts as they are published_ ðŸ˜
 # In this series
 
 - Solar monitoring part 1 - _you are here_
+- [Solar monitoring part 2](https://thomasquirke.com/2023/08/26/solar-monitoring-pt2.html)
