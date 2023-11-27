@@ -48,7 +48,7 @@ With the new IAM condition key, we can modify our bucket policy to only accept V
             "Resource": "arn:aws:s3:::org-vpc-flow-logs",
             "Condition": {
                 "StringEquals": {
-                    "aws:SourceOrgId": "your-org-id",
+                    "aws:SourceOrgId": "your-org-id"
                 }
             }
         }
