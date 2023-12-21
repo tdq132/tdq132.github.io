@@ -9,6 +9,7 @@ Recently, I was tasked with getting CloudWatch logs into our SIEM for monitoring
 ## Architecture
 
 I designed the following high-level architecture to support this integration:
+
 ![ArchitectureDiagram](/assets/2023-12-21-architecture.drawio.png)
 
 The process flow looks something like this:
@@ -46,6 +47,7 @@ I won't go into the CDK code for this stack in too much detail - it's actually r
 The Firehose stack is intended to be deployed to any account (within our organization) where we want to stream the logs to our centralised bucket. 
 
 The stack deploys the following components:
+
 ![FirehoseStack](/assets/2023-12-21-firehose.drawio.png)
 
 The CDK stack takes a few parameters, such as what bucket the logs should be written to, what KMS Key to use for the Kinesis Firehose, and what CloudWatch Log Groups should have the Firehose subscription added. 
